@@ -1,0 +1,18 @@
+<div class="container">
+  <!-- Cabecera (Titulo) -->
+  <div>
+    <pokemon-header (clickHeader)="onClickHeader()"></pokemon-header>
+  </div>
+
+  <div>
+    <!-- Mostramos el listado si NO tenemos pokemon seleccionado -->
+    <pokemon-list *ngIf="!pokemonSelected"
+      (selectItem)="onSelectItem($event)">
+    </pokemon-list>
+
+    <!-- Mostramos el listado si  tenemos pokemon seleccionado -->
+    <pokemon-detail *ngIf="pokemonSelected"
+      [pokemonReference]="pokemonSelected">
+    </pokemon-detail>
+  </div>
+</div>

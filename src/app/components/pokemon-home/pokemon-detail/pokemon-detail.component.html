@@ -1,0 +1,31 @@
+<div class="grid-container">
+  <ng-container *ngIf="pokemon">
+    <!-- Titulo con la imagen -->
+    <div class="item-header">
+      <img [src]="pokemon.sprites.front_default" />
+      <span>{{ pokemon.name | titlecase }}</span>
+    </div>
+
+    <!-- Datos detalle -->
+    <div class="item-label">
+      {{ "label.weight" | translate }}
+    </div>
+    <div class="item-value">
+      {{ pokemon.weight }}
+    </div>
+
+    <div class="item-label">
+      {{ "label.height" | translate }}
+    </div>
+    <div class="item-value">
+      {{ pokemon.height }}
+    </div>
+
+    <div class="item-label">
+      {{ "label.types" | translate }}
+    </div>
+    <div class="item-value">
+      {{ type }}
+    </div>
+  </ng-container>
+</div>

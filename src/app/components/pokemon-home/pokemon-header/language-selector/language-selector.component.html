@@ -1,0 +1,9 @@
+<div class="containerLang">
+    <!-- Mostramos los idiomas NO actuales para cambiar a ellos -->
+    <img *ngFor="let lang of langs"
+      [ngClass]="{'lang-select': lang == translate.currentLang}"
+      src="./assets/images/langs/{{lang}}.png"
+      [title]=" 'label.lang.'+ lang | translate"
+      (click)="onClick(lang)" />
+
+</div>

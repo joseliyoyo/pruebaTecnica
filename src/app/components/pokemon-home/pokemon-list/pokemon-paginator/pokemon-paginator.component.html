@@ -1,0 +1,16 @@
+<div class="container-paginator" *ngIf="list">
+  <!-- Informacion de la pagina actual y del total de elementos -->
+  <div>
+    {{'msg.paginator' | translate :
+      {
+        initPage:  sizePage * (numPage - 1),
+        endPage: sizePage * numPage,
+        total: list.count
+      }
+    }}
+  </div>
+
+  <!-- Botones pagina siguiente y anterior -->
+  <a [ngClass]="{'buttonDisabled': !list.previous}" (click)="changePage(list.previous, -1)"> < </a>
+  <a [ngClass]="{'buttonDisabled': !list.next}" (click)="changePage(list.next, +1)"> > </a>
+</div>

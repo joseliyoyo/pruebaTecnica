@@ -1,0 +1,26 @@
+@import "../../../../../assets/styles/variables.scss";
+
+div.container-paginator{
+  display: inline-grid;
+  text-align: right;
+  color: #999999;
+  grid-template-columns: 120px 20px 20px;
+}
+
+div.container-paginator div{
+  font-size: 10pt;
+}
+
+div.container-paginator a{
+  font-size: 14pt;
+  cursor: pointer;
+  font-weight: bold;
+}
+div.container-paginator a:hover{
+  color: $main-color;
+}
+
+div.container-paginator a.buttonDisabled{
+  cursor: auto;
+  color: #DDDDDD;
+}

@@ -1,0 +1,15 @@
+@import "../../../../../assets/styles/variables.scss";
+div.item {
+  margin-right: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid $main-color;
+}
+
+div.item:hover {
+  background-color: $secundary-color;
+}

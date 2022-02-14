@@ -1,0 +1,11 @@
+
+<div class="flex-container">
+  <!--Items del listado-->
+  <div class="item-container" *ngFor="let pokemonReference of pokemonList?.results">
+    <pokemon-item [pokemonReference]="pokemonReference" (clickItem)="onClickItem($event)"></pokemon-item>
+  </div>
+  <!--Paginador-->
+  <div *ngIf="pokemonList" class="paginator">
+    <pokemon-paginator [(list)]="pokemonList" [sizePage]="sizePage"></pokemon-paginator>
+  </div>
+</div>

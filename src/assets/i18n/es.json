@@ -1,0 +1,13 @@
+{
+  "label.pokemon.list": "Lista de pokemon",
+  "label.weight": "Peso",
+  "label.height": "Altura",
+  "label.types": "Tipos",
+  "label.lang.en": "English",
+  "label.lang.es": "Spanish",
+  "label.lang.it": "Italian",
+  "msg.paginator": "{{initPage}} - {{endPage}} de {{total}}"
+
+}
+
+

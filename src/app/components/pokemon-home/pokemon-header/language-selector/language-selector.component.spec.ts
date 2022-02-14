@@ -1,33 +1,32 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { createTranslateLoader } from 'src/app/app.module';
+import { LanguageSelectorComponent } from './language-selector.component';
 
-import { AppComponent } from './app.component';
-import { createTranslateLoader } from './app.module';
-
-describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
+describe('LanguageSelectorComponent', () => {
+  let component: LanguageSelectorComponent;
+  let fixture: ComponentFixture<LanguageSelectorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        HttpClientModule,
+        HttpClientTestingModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,
             useFactory: createTranslateLoader,
-            deps: [HttpClient],
+            deps: [HttpClientTestingModule],
           }
         }),
       ],
-      declarations: [ AppComponent ]
+      declarations: [ LanguageSelectorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(LanguageSelectorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

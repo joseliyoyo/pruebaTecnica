@@ -1,0 +1,15 @@
+div.container-header{
+  display: grid;
+  grid-template-columns: auto 150px;
+}
+
+div.container-header div.languages{
+  align-items: center;
+  text-align: right;
+}
+
+
+h1.header{
+  cursor: pointer;
+  font-size: 25pt;
+}

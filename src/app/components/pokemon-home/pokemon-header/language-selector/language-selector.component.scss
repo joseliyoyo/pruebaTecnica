@@ -1,0 +1,10 @@
+@import "../../../../../assets/styles/variables.scss";
+div.containerLang img{
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+div.containerLang img.lang-select{
+  border: 2px solid $main-color;
+}
